@@ -6,7 +6,7 @@ import program.bank.BankProgram;
 
 public class Main {
 	
-    /* driver method */
+    /* driver method... */
 	public static void main(String[] args) {
 
 		BankProgram.run();
