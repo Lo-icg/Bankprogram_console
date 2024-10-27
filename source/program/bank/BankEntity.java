@@ -3,7 +3,7 @@ package program.bank;
 import java.util.List;
 import java.util.Scanner;
 
-import program.bank.login.Acccount;
+import program.bank.login.Account;
 import program.command.Confirmation;
 import program.thread.Mythread;
 import program.user.UserAccount;
@@ -56,8 +56,8 @@ public class BankEntity  {
 		String field1 = align("Id no", 5, false);
 		String field2 = align("username", (longestUsernameSize > 8) ? longestUsernameSize : 8, true);
 
-		String border = Acccount.generateBorder(field1, '+', '-', '-').toString() + 
-				Acccount.generateBorder(field2, '+', '-', '+').toString() + "\n";
+		String border = Account.generateBorder(field1, '+', '-', '-').toString() + 
+				Account.generateBorder(field2, '+', '-', '+').toString() + "\n";
 
 		format.append(border);
 		format.append(field1).append(field2).append("\n");
@@ -162,7 +162,7 @@ public class BankEntity  {
 
 					if (id >= 0 && id < user.size()) {
 
-						Acccount.login(user, id); // direct to log in user bank account method
+						Account.login(user, id); // direct to log in user bank account method
 						userIdFound = true;
 
 					} else throw new IndexOutOfBoundsException();

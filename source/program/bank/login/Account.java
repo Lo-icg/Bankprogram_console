@@ -7,9 +7,9 @@ import program.command.AccountAction;
 import program.command.Confirmation;
 import program.user.UserAccount;
 
-public class Acccount {
+public class Account {
 
-	private Acccount() {
+	private Account() {
 		super();
 	}
 
