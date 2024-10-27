@@ -88,11 +88,6 @@ public class Acccount {
 
 		formatInfo.append("Account\n" + border + "\n|" + userNameInfo + userBalanceInfo + "\n" + border);
 		System.out.println(formatInfo.toString() + "\n");
-
-		//		accountInfo.append("Account\n");
-		//		accountInfo.append(border);
-		//		accountInfo.append("\n|" + userNameInfo + userBalanceInfo + "\n");
-		//		accountInfo.append(border);
 	}
 
 
