@@ -37,18 +37,17 @@ public class BankEntity  {
 		resetFlag();
 		return userInput;
 	}
-
+    
+	
+	// display user account in a table
 	private void displayInTable(List<UserAccount> userList) {
 
 		var longestUsernameSize = userList.get(0).getUsername().length();
-
-		//int longestUsernameIndex = 0;
 
 		for (int i = 0; i < userList.size() - 1; i++) {
 
 			if (userList.get(i + 1).getUsername().length() > longestUsernameSize) {
 				longestUsernameSize = userList.get(i + 1).getUsername().length();
-				//longestUsernameIndex = i + 1;
 			}
 		}
 
@@ -56,7 +55,6 @@ public class BankEntity  {
 
 		String field1 = align("Id no", 5, false);
 		String field2 = align("username", (longestUsernameSize > 8) ? longestUsernameSize : 8, true);
-
 
 		String border = Acccount.generateBorder(field1, '+', '-', '-').toString() + 
 				Acccount.generateBorder(field2, '+', '-', '+').toString() + "\n";
@@ -76,10 +74,9 @@ public class BankEntity  {
 
 		format.append(border);
 		System.out.print(format.toString());
-
 	}
 
-
+    // return a new format of String with a fixed size for the border alignment
 	private String align(String text, int sizeBase, boolean addBorderAtTheEnd) {
 
 		StringBuilder format = new StringBuilder();
@@ -111,7 +108,6 @@ public class BankEntity  {
 	}
 
 	private static Scanner read = new Scanner(System.in);
-
 
 	/* display menu selection with list of user account */
 	protected void menu(List<UserAccount> users) {
